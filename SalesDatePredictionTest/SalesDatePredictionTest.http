@@ -1,0 +1,6 @@
+@SalesDatePredictionTest_HostAddress = http://localhost:5097
+
+GET {{SalesDatePredictionTest_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

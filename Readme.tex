@@ -1,0 +1,118 @@
+Puntos a  tener en cuenta para el proyecto de salesdatepredictions   ---
+
+
+*********Tener en cuenta :   ************************************************************************************
+Se adjunta archivo de word en el cual se indica como se ejecuta el proyecto con capturas de pantalla funcionales.
+
+
+
+
+cambiar la conexion en appsetings --------------------------------------*********************----********
+
+
+ "ConnectionStrings": {
+     "MiConexion": "Server=FERCHO\\SQLEXPRESS;Database=StoreSample;Trusted_Connection=True;"
+ },
+ 
+ cambiarla a la que se tenga configurada en sql server ----------------**************-----********
+ 
+ se crea el proyecto SalesDatePredictionTest para implementar pruebas unitarias xunit----------------************--------------------
+ 
+ 
+ ---********** ---IMPORTANTE*****************-----------------------------*******************************
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+ 
+SalesDatePredictionTest ----------------------------------------************************
+
+
+dotnet new xunit -o TuProyectoDePruebas  --- comando para crear el proyecto de pruebas 
+dotnet add package xunit  --- agregar paquete xunit
+
+ 
+
+ ++++++++---------------------------------------*************************************************
+ 
+ 
+ tener presente las URLS son muy importantes para poderunificar el back con el front para ello :  
+ *****Se indica las rutas donde se encuentran las URLS correspondientes.*********
+ 
+ URL API CustomerOrderPredictions  ------**********************
+ https://localhost:7170/CustomerOrderPredictions  
+ 
+ se encuentra configurada en 
+ "sales-date-prediction.service.ts" cualquier cambio de URL para la api se debe realizar aqui
+ 
+ --------------------------------------------------------------*****************
+ 
+ URL API Orders--------***************************
+ https://localhost:7170/Orders
+ 
+ se encuentra configurada en "src/app/services/order.service.ts"  cualquier cambio de URL para la api se debe realizar aqui
+ 
+ -----------------------------------------------------------------******************************************
+ 
+ URL API https://localhost:7170/OrdersCreate -------------------*************************
+ 
+ se encuentra configurada en  "src/app/services/order-create.service.ts" ualquier cambio de URL para la api se debe realizar aqui
+ 
+ -----------------------------------------------**********************************************+
+ 
+ URL ANGULAR --------**********************************--------------------------------------------------
+ 
+ http://localhost:4200/ 
+ 
+ se encuentra configurada en en procram.cs de la API para la integracion back - front, si al ejecutar el proyecto de angular el puerto es diferente favor cambiar.
+ 
+------------------------**********************----------------------------------------------------------------------
+ 
+ 
+ ************** IMPORTANTE*****************-----------------------------*******************************
+ 
+ +++para crear una new order adjunto los datos corespondientes ya que de no llenar todos los campos que son obligatorios 
+ +++ no lo permite realizar++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   
+Los datos son : 
+   
+ 
+  "empId": 9,
+  "shipperId": 2,
+  "shipName": "Ship to 71-C",
+  "shipAddress": "9012 Suffolk Ln.",
+  "shipCity": "Boise",
+  "orderDate": "2025-03-20T02:42:50.015Z",
+  "requiredDate": "2025-03-20T02:42:50.015Z",
+  "shippedDate": "2025-03-20T02:42:50.015Z",
+  "freight": 79,
+  "shipCountry": "Colombia",
+  "custId":91 ,
+  "orderDetail": {
+    "productId": 22,
+    "unitPrice": 17,
+    "qty": 2,
+    "discount": 0.030
+  
+
+
+
+SalesDatePredictionTest ----------------------------------------
+
+
+dotnet new xunit -o TuProyectoDePruebas  --- comando para crear el proyecto de pruebas 
+dotnet add package xunit  --- agregar paquete xunit
+
+
+
+----- para el punto 5 Graficando con D3 -----------------
+
+Se ha creado la carpeta grafico-barras en la cual se tienen tres archivos solo se debe
+
+Cómo ejecutar:
+
+1-Abre index.html en tu navegador web.
+2-Ingresa números separados por coma en el input de texto y haz clic en "Update Data".
+3-El gráfico de barras se mostrará en el div "chart". 
+
+
+
+-------------------------------------------------------------------------------
